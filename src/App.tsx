@@ -23,11 +23,15 @@ export function App() {
   return (
     <>
     <nav className={showMenu ? ("flex flex-col absolute z-10 h-screen w-full ml-0 bg-red-600 transition-all duration-700") : ("flex flex-col absolute z-10 h-screen w-full ml-[100vw] bg-red-600 transition-all duration-700")}>
-      <div className="flex items-center justify-between w-full px-6 py-6 border border-white">
-        <span>logo</span>
-        <a onClick={handleShowMenu} href="">X</a>
+      <div className="flex items-center justify-between w-full px-6 py-6">
+        <img src={Logo} alt="" width={200}/>
+        <button onClick={handleShowMenu}>
+        <svg xmlns="http://www.w3.org/2000/svg" height="34" viewBox="0 -960 960 960" width="34" fill="white">
+          <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+        </svg>
+        </button>
       </div>
-      <div className="flex flex-col h-full w-full items-center justify-center gap-8">
+      <div className="flex flex-col h-full w-full items-center justify-center gap-10">
         <ItemMenuMobile
           url=""
           title="Início"
