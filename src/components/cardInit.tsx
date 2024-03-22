@@ -1,15 +1,20 @@
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
+
 interface CardProps{
   'title':  string
-  'image':  string
+  'icon':  string
 }
 
 export function CardInit(props: CardProps){
+  AOS.init()
   return(
       <a
-        className="flex items-center justify-start font-semibold text-xl p-6 bg-stone-100 hover:bg-emerald-500 transition-colors duration-500 w-full h-[100px] rounded-lg md:w-[350px]"
-        href="#">
-          <img src={props.image} alt="" width={65}/>
-          <p className="text-white font-semibold text-xl ml-3 drop-shadow-md">{props.title}</p>
+        className="flex flex-col items-center justify-center font-semibold text-xl p-6 gap-2 bg-red-600 hover:bg-red-500 transition-colors duration-500 rounded-lg w-[200px] h-[200px]"
+        href="#" data-aos="fade-left">
+          <img src={props.icon} alt="" width={65}/>
+          <p className="text-white font-semibold text-xl drop-shadow-md">{props.title}</p>
       </a>
   )
 }
