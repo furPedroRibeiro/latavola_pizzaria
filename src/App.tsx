@@ -22,7 +22,7 @@ export function App() {
   }
   return (
     <>
-    <nav className={showMenu ? ("flex flex-col absolute z-10 h-screen w-full ml-0 bg-red-600 transition-all duration-700") : ("flex flex-col absolute z-10 h-screen w-full ml-[100vw] bg-red-600 transition-all duration-700")}>
+    <nav className={showMenu ? ("flex flex-col absolute z-10 h-screen w-full ml-0 bg-red-600 transition-all duration-700 overflow-x-hidden") : ("flex flex-col absolute z-10 h-screen w-full ml-[100vw] bg-red-600 transition-all duration-700")}>
       <div className="flex items-center justify-between w-full px-6 py-6">
         <img src={Logo} alt="" width={200}/>
         <button onClick={handleShowMenu}>
