@@ -22,16 +22,6 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-    <script>
-      const btnOpenMenu = document.getElementsByClassName('btnOpenMenu')
-      const body = document.getElementsByTagName('body')
-
-      btnOpenMenu.onclick = function(){
-        if(btnOpenMenu.style.marginLeft == 0){
-          body.style.overflow = 'hidden'
-        }
-      }
-    </script>
+    <script type="module" src="/src/cardapio/cardapio.tsx"></script>
   </body>
 </html>

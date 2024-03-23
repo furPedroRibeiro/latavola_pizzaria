@@ -5,7 +5,7 @@ interface propsItem{
 export function ItemMenuMobile(props: propsItem){
   return(
     <>
-    <a id="itemMenuMobile" href={props.url} className="font-semibold text-white text-lg drop-shadow-xl px-2 py-1 flex flex-col">{props.title}</a>
+    <a href={props.url} className="font-semibold text-white text-lg drop-shadow-xl px-2 py-1 flex flex-col">{props.title}</a>
     </>
   )
 }

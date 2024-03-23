@@ -22,7 +22,7 @@ export function App() {
   }
   return (
     <>
-    <nav className={showMenu ? ("flex flex-col absolute z-10 h-screen w-full ml-0 bg-red-600 transition-all duration-700 overflow-x-hidden") : ("flex flex-col absolute z-10 h-screen w-full ml-[100vw] bg-red-600 transition-all duration-700")}>
+    <nav className={showMenu ? ("flex flex-col absolute z-10 h-screen w-full ml-0 bg-red-600 transition-all duration-700") : ("flex flex-col absolute z-10 h-screen w-full ml-[100vw] bg-red-600 transition-all duration-700")}>
       <div className="flex items-center justify-between w-full px-6 py-6">
         <img src={Logo} alt="" width={200}/>
         <button onClick={handleShowMenu}>
@@ -33,19 +33,19 @@ export function App() {
       </div>
       <div className="flex flex-col h-full w-full items-center justify-center gap-10">
         <ItemMenuMobile
-          url=""
+          url="./"
           title="Início"
         />
         <ItemMenuMobile
-          url=""
+          url="../cardapio/"
           title="Cardápio"
         />
         <ItemMenuMobile
-          url=""
+          url="../sobre"
           title="Sobre"
         />
         <ItemMenuMobile
-          url=""
+          url="../links"
           title="Links e contatos"
         />
       </div>
@@ -53,22 +53,22 @@ export function App() {
     <header className="bg-red-600 w-full px-6 py-4 flex items-center justify-around flex-wrap h-[18vh]">
       <img src={Logo} alt="" width={200}/>
       <ItemMenu
-        url=""
+        url="./"
         title="Início"
       />
       <ItemMenu
-        url=""
+        url="../cardapio/"
         title="Cardápio"
       />
       <ItemMenu
-        url=""
+        url="../sobre"
         title="Sobre"
       />
       <ItemMenu
-        url=""
+        url="../links"
         title="Links e contatos"
       />
-      <button onClick={handleShowMenu} className="md:hidden" id="buttonMenu">
+      <button onClick={handleShowMenu} className="btnOpenMenu md:hidden" id="buttonMenu" aria-label="Abrir menu">
         <svg width="35" height="24" viewBox="0 0 35 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="35" height="4" rx="2" fill="white"/>
           <rect y="10" width="35" height="4" rx="2" fill="white"/>
@@ -82,6 +82,7 @@ export function App() {
         <p className="text-center drop-shadow-xl font-semibold">Seja bem vindo a pizzaria La Tavola, aqui você encontra produtos e profissionais de qualidade, prontos pra pra te proporcionar experiências e sabores únicos. Trabalhamos com delivery e retira, fique a vontade!!</p>
         <button className="bg-red-600 py-2 px-4 rounded-md font-semibold text-white drop-shadow-xl hover:bg-transparent hover:ring-2 ring-red-600 hover:text-red-600 transition-colors duration-500">Ver Cardápio</button>
       </div>
+    <span className={showMenu ? ("hidden") : ("block")}>
       <div className="w-full flex items-center justify-center gap-8 py-20 bg-red-600 flex-wrap">
           <CardInit
             icon={Moto}
@@ -100,6 +101,7 @@ export function App() {
             title="Fazer pedido" 
           />
       </div>
+      </span>
     </main>
     </>
   )
